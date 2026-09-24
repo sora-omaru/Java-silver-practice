@@ -466,3 +466,21 @@ Function<T,R>  R apply(T) 　引数を受け取って指定された型(R)で返
 Predicate<T>  boolean test(T) 引数を受け取って評価する
 Supplier<>   T get()　なにも受け取らずに結果だけを返す
 Consumer<T> void accept(T) 引数を受け取ってなにも返さない。処理のみを行う
+
+
+API
+知らなかったこと
+Comparator
+カスタム順序を適応することができる。大商比較を前提にしており、equals()を使えるものを渡す。
+
+こちらを関数インターフェースとして使用した場合は[compare()]をOverrideを実装する必要がある。
+ラムダ式を使用しているのであれば、[implements Compare<T>]こちらは省略されている可能性があるからそこは注意する。
+これができる理由はComparatorが関数式インターフェースだから
+
+Comparableを使う場合はcompare()ではなく[compareTo()]を使用する。
+
+compareTo()を使用すると自然な順番になるためintだったら昇順みたいになる。
+
+
+
+1:D 
