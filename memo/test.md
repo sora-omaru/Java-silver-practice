@@ -518,3 +518,35 @@ mapメソッドについて
 もし、キーの重複がある場合は[上書き]される
 
 そしてキーとバリューはどちらも[nullを許容する]ということが特徴です
+
+例外処理：
+1:B 2:C 3:D 4:D 5:b 6:B 7:B 8:D 9:B 10: 11:AD 12:C 13:C 14:B 15:D 16:B 17:D
+不正解：2:B 3:E 5:C 10E 12:D 14:A 16:D 17:B
+
+知らなかったこと
+起動パラメータを要しない場合、mainのStringにわたる引数パラメータはnullとなるが、lengthで参照することができる。
+つまり、lengthで参照しても例外は起こらない。しかし、args[0]というようにしても例外になりエラー扱いになる。
+
+5:finalとcatchの順番
+catchでreturnが確認できる場合、finallyを先に実行してその後、returnが実行される。
+
+12:検査例外について
+例外には種類があります。
+2種類の例外処理がある。
+[検査例外],[非検査例外]で分けられている。
+[検査例外]では
+IOException
+SQLException
+InterruptedException ...etc　　
+などの[Exception]は例外処理の[throws]やtry,catchのハンドリングが必要
+
+[非検査処理]では
+NullPointerException
+ArrayIndexOutOfBoundsException
+IllegalArgumentException ...etc
+などであるが、こちらはthrowsなどは必要ない。
+
+これらがないとコンパイルエラーになるため、使い分ける。、
+
+
+nullのものに対して中身を呼び出すような処理をするとnullの例外が発生する、
