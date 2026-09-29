@@ -550,3 +550,69 @@ IllegalArgumentException ...etc
 
 
 nullのものに対して中身を呼び出すような処理をするとnullの例外が発生する、
+
+モジュールシステム
+1:AB 2:D 3:D 4:C 5:A 
+
+知らなかったこと
+モジュールなどのコマンド集
+最重要コマンド
+[javac]　.javaを.classにコンパイル　--Javaコードを翻訳する
+[java]   .classを実行する　--Javaプログラムを動かす
+[jar]  JARファイルの作成・展開・確認　--ファイルをまとめる
+[javadoc]　APIドキュメント作成　--コメントからHTML化する
+
+コマンドの使い方について
+[javac]コマンドについて
+javac Sample.javaと実行
+
+複数ファイルを指定することもできる。
+
+[-d]コマンドを使うことで.classの出力先を指定することもできる。
+javac -d out Sample.java
+out/
+Sample.class
+このように保存される
+パッケージがある場合はその構造に沿って保存される。
+package com.example;
+なら
+out/com/example/Sample.class
+このようになる
+
+[Java]コマンドについて
+クラスを指定し、クラスを実行できる。
+java Sample
+この時に注意することとして
+java Sample.class
+ではないこと、[ファイル名]でなく[クラス名を記載する]
+
+[クラスパス]
+java -cp out Sample
+クラスをどこから探すか指定する
+out/
+ Sample.class
+なら
+java -cp out Sample
+
+モジュール関係
+[--module-path]
+モジュールを探す場所を指定する
+短縮形は
+[-p]
+java --module-path mods ...
+みたいに使う
+
+
+[--module]
+実行する場所を指定する
+短縮形は
+[-m]
+java -p mods -m sample/com.example.Main
+意味は
+sampleというモジュール内の
+com.example.Main
+を実行するということ
+
+問題
+1:AB 2:D 3:B 4:C 5:B 6:AC 7:A
+不正解：3:D 4:D
