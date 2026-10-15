@@ -795,3 +795,12 @@ Exception型について
 
 答え合わせ
 17:AE 23:C 25:D 31:A 45:BDE 53:A 64:C 68:BF 71:BD 78:B 
+17:
+A.int[] array;
+array = new int[]{};
+これが成り立つ理由としては[]に要素を入れていないから。要素数0として扱われている、
+C,int[] array = new int[3]{}は[3]と｛｝を同時に呼んでしまっているからダメになっている。
+
+
+23:今回はmapの中にある、setをCollection型に送ればいいため、それを出せるmap.valueまたはmap.keyset map.entrySetを渡すことができる
+
