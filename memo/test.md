@@ -804,3 +804,12 @@ C,int[] array = new int[3]{}は[3]と｛｝を同時に呼んでしまってい�
 
 23:今回はmapの中にある、setをCollection型に送ればいいため、それを出せるmap.valueまたはmap.keyset map.entrySetを渡すことができる
 
+
+模試
+1:CD 2:E 3:B 4:B 5:A 6:A 7:A 8:A 9:AEF 10:ABE 11:B 12:D 13:D 14:C 15:A 16:C 17:A 18:C 19:d 20:B 21:E 22:D 23:B 24:D 25:BD
+26:C 27:E 28:CE 29:B 30:C 31:C  32:A 33:A 34C 35:A 36:C 37:C 38:A 39:C 40:A 41:F 42:D 43:B 44:C 45:D 46:b 47:C 48:D 49:C 
+50:AB 51:BDEF 52:c 53:D 54:B 55:D 56:D 57:E 58:B 59:D 60:A 61:C 62:A 63:AB 64:C 65:D 66:F 67:B 68:B 69:C 70:AC 71:CE 72:A
+73:D 74:D 75:BE 76:A 77:A 78:ACE 79:A 80:C
+
+不正解
+4:E 9:ABF 13:C 15:C 16:E 23:C 24:B 33:B 39:A 43:b 44:B 51:ABEG 52:B 57A 59:D 65:E 72:C 73:C 75:BE 77:C 78BCF 79:d 80:A
